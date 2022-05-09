@@ -5,7 +5,6 @@ function createEtch(x){
         for (let j = 0; j < x; j++){
             const block = document.createElement('div');
             block.classList.add('etch-block');
-            block.textContent = "Hello Sean";
             container.appendChild(block);
         }
     }
