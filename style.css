@@ -20,7 +20,7 @@ body{
 .etch-block-blank{
     flex: 1 0 5.5%;
     border: 2px solid rgb(153, 153, 153);
-    background-color: gray;
+    background-color: darkgray;
     height: auto;
 }
 .etch-block-blank::before{
