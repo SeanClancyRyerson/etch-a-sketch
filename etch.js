@@ -10,6 +10,12 @@ function createEtch(x){
     }
 }
 
-const blocks = document.querySelectorAll('')
-
 createEtch(16);
+
+function changeColor(e){
+    //console.log(e);
+}
+
+const blocks = document.querySelectorAll('.etch-block-blank');
+blocks.forEach(block => block.addEventListener('mouseover', changeColor, false));
+
