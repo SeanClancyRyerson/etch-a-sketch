@@ -16,9 +16,9 @@ body{
 
 .etch-container {
     display: grid;
-    grid-gap: 0em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+    border: 6px solid rgb(111, 0, 0);
 }
 
 .etch-block-blank{
