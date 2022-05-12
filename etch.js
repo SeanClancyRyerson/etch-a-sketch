@@ -10,12 +10,29 @@ function createEtch(x){
     }
 }
 
-createEtch(16);
+function deleteOldBlocks(){
+    const blocks = document.querySelectorAll('.etch-block-blank');
+    blocks.forEach(block => block.remove());
+}
+
+function addEvents(){
+    const blocks = document.querySelectorAll('.etch-block-blank');
+    blocks.forEach(block => block.addEventListener('mouseover', changeColor, false));
+}
+
+function resize(){
+    let newSize = prompt("Enter a new size");
+    while (newSize < 1 || newSize > 100){
+        newSize = prompt("Please enter a number between 1 and 100");
+    }
+    deleteOldBlocks();
+    createEtch(newSize);
+    addEvents();
+}
 
 function changeColor(e){
     e.target.style.backgroundColor = "gray";
 }
 
-const blocks = document.querySelectorAll('.etch-block-blank');
-blocks.forEach(block => block.addEventListener('mouseover', changeColor, false));
-
+createEtch(16);
+addEvents();
