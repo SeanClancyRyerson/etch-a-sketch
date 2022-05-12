@@ -13,7 +13,7 @@ function createEtch(x){
 createEtch(16);
 
 function changeColor(e){
-    //console.log(e);
+    e.target.style.backgroundColor = "gray";
 }
 
 const blocks = document.querySelectorAll('.etch-block-blank');
