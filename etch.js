@@ -1,4 +1,5 @@
 
+/* OLD VERSION OF CREATING GRID
 function createEtch(x){
     const container = document.querySelector('.etch-container');
     for (let i = 0; i < x; i++){
@@ -7,6 +8,19 @@ function createEtch(x){
             block.classList.add('etch-block-blank');
             container.appendChild(block);
         }
+    }
+}
+*/
+
+function createEtch(rows, cols){
+    const container = document.querySelector('.etch-container');
+
+    container.style.setProperty('--grid-rows', rows);
+    container.style.setProperty('--grid-cols', cols);
+    for (c = 0; c < (rows * cols); c++) {
+        const block = document.createElement('div');
+        block.classList.add('etch-block-blank');
+        container.appendChild(block);
     }
 }
 
@@ -26,7 +40,7 @@ function resize(){
         newSize = prompt("Please enter a number between 1 and 100");
     }
     deleteOldBlocks();
-    createEtch(newSize);
+    createEtch(newSize, newSize);
     addEvents();
 }
 
@@ -34,5 +48,5 @@ function changeColor(e){
     e.target.style.backgroundColor = "gray";
 }
 
-createEtch(16);
+createEtch(16,16);
 addEvents();
