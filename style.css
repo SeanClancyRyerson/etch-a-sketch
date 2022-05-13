@@ -27,6 +27,7 @@ body{
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     border: 6px solid rgb(111, 0, 0);
+    border-radius: 4px;
 }
 
 .etch-block-blank{
